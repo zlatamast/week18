@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        input:required:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Анкета владельца кота</h1>
+    <form>
+        <fieldset>
+            <legend>Информация о владельце:</legend>
+            <label for="name">Имя владельца:</label> <br>
+            <input type="text" id="name" required><br>
+            <label for="contacts"> Контакты владельца:</label> <br>
+            <input type="text" id="contacts" required>
+        </fieldset>
+        <div>
+            <label for="catname"> Кличка питомца:</label> <br>
+            <input type="text" id="catname"> </div>
+        <div>
+            <p> Порода питомца:</p>
+            <select required>
+                <option selected disabled value="">Выберите породу</option>
+                <option value="none">Беспородная</option>
+                <option value="blue">Русская голубая кошка</option>
+                <option value="pers">Персидская</option>
+                <option value="siam">Сиамская</option>
+                <option value="scot">Шотландская</option>
+            </select>
+        </div>
+        <div>
+            <div>Чем питается:</div>
+            <div><input type="checkbox" id="food1" name="food" checked>
+                <label for="food1">Сухой корм</label>
+            </div>
+            <div>
+                <input type="checkbox" id="food2" name="food">
+                <label for="food2">Влажный корм</label>
+            </div>
+            <div>
+                <input type="checkbox" id="food3" name="food">
+                <label for="food3">Натуральный корм</label>
+            </div>
+        </div>
+        <div>
+            <p>Пол питомца:</p>
+            <input type="radio" name="sex" value="f" required> Самка <br>
+            <input type="radio" name="sex" value="m" required> Самец <br>
+        </div>
+        <div>
+            <p>Комментарий владельца:</p>
+            <textarea placeholder="Ваш комментарий" rows="8" cols="50"></textarea>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            <p> Приложите фото питомца</p>
+            <input type="file" name="userfoto" required>
+        </div>
+        <div>
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
+</body>
+
+</html>
